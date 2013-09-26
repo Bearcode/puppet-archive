@@ -48,7 +48,7 @@ define archive::extract (
   case $ensure {
     present: {
 
-      $extract_zip    = "/bin/unzip -o ${src_target}/${name}.${extension} -d ${target}"
+      $extract_zip    = "/usr/bin/unzip -o ${src_target}/${name}.${extension} -d ${target}"
       $extract_targz  = "/bin/tar --no-same-owner --no-same-permissions -xzf ${src_target}/${name}.${extension} -C ${target}"
       $extract_tarbz2 = "/bin/tar --no-same-owner --no-same-permissions -xjf ${src_target}/${name}.${extension} -C ${target}"
 
